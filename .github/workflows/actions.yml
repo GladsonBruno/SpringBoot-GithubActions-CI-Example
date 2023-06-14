@@ -37,7 +37,7 @@ jobs:
         password: ${{secrets.DOCKER_TOKEN}}
 
     - name: Build Docker Image
-      run: docker build -t ${{ vars.DOCKER_REGISTRY }}/SpringBoot-GithubActions-CI-Example:latest .
+      run: docker build -t ${{ vars.DOCKER_REGISTRY }}/spring-boot-github-actions-ci-example .
       
     - name: Docker Push
-      run: docker push ${{ vars.DOCKER_REGISTRY }}/SpringBoot-GithubActions-CI-Example:latest
+      run: docker push ${{ vars.DOCKER_REGISTRY }}/spring-boot-github-actions-ci-example
