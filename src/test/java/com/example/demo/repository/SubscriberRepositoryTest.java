@@ -10,13 +10,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.example.demo.entity.Subscriber;
 
 @SpringBootTest
-class UserRepositoryTest {
+class SubscriberRepositoryTest {
 
 	@Autowired
 	SubscriberRepository subscriberRepository;
 	
 	@Test
-	void testIfUserOneExists() {
+	void testIfSubscriberOneExists() {
 		
 		Subscriber user = subscriberRepository.findById(1);
 		
@@ -34,7 +34,7 @@ class UserRepositoryTest {
 	}
 	
 	@Test
-	void testIfUserElevenNotExists() {
+	void testIfSubscriberElevenNotExists() {
 		
 		Subscriber subscriber = subscriberRepository.findById(11);
 		
@@ -43,11 +43,11 @@ class UserRepositoryTest {
 	}
 	
 	@Test
-	void testGetAllUsers() {
+	void testGetAllSubscribers() {
 		
 		List<Subscriber> subscribers = subscriberRepository.findAll();
 		
-		Assertions.assertEquals(5, subscribers.size());
+		Assertions.assertEquals(10, subscribers.size());
 		
 	}
 	
