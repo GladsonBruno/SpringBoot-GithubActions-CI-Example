@@ -1,52 +1,53 @@
 package com.example.demo.repository;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.example.demo.vo.UserVO;
+import com.example.demo.entity.Subscriber;
 
 @SpringBootTest
 class UserRepositoryTest {
 
-	UserRepository userRepository = new UserRepository();
+	@Autowired
+	SubscriberRepository subscriberRepository;
 	
 	@Test
 	void testIfUserOneExists() {
 		
-		UserVO user = this.userRepository.getById(1);
+		Subscriber user = subscriberRepository.findById(1);
 		
 		Assertions.assertNotNull(user);
 		
-		UserVO expectedUser = new UserVO();
-		expectedUser.setId(1);
-		expectedUser.setUsername("Usuário 1");
-		expectedUser.setEmail("usuario-1@gmail.com");
+		Subscriber expectedSubscriber = new Subscriber();
+		expectedSubscriber.setId((long) 1);
+		expectedSubscriber.setUsername("user-1");
+		expectedSubscriber.setEmail("user-1@gmail.com");
 		
-		Assertions.assertEquals(expectedUser.getId(), user.getId());
-		Assertions.assertEquals(expectedUser.getUsername(), user.getUsername());
-		Assertions.assertEquals(expectedUser.getEmail(), user.getEmail());
+		Assertions.assertEquals(expectedSubscriber.getId(), user.getId());
+		Assertions.assertEquals(expectedSubscriber.getUsername(), user.getUsername());
+		Assertions.assertEquals(expectedSubscriber.getEmail(), user.getEmail());
 		
 	}
 	
 	@Test
 	void testIfUserElevenNotExists() {
 		
-		UserVO user = this.userRepository.getById(11);
+		Subscriber subscriber = subscriberRepository.findById(11);
 		
-		Assertions.assertNull(user);
+		Assertions.assertNull(subscriber);
 		
 	}
 	
 	@Test
 	void testGetAllUsers() {
 		
-		List<UserVO> users = this.userRepository.getAll();
+		List<Subscriber> subscribers = subscriberRepository.findAll();
 		
-		Assertions.assertEquals(10, users.size());
+		Assertions.assertEquals(5, subscribers.size());
 		
 	}
 	

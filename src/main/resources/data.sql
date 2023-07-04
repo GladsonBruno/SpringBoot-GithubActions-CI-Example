@@ -1,0 +1,13 @@
+INSERT INTO roles(name) VALUES('ROLE_USER');
+INSERT INTO roles(name) VALUES('ROLE_MODERATOR');
+INSERT INTO roles(name) VALUES('ROLE_ADMIN');
+INSERT INTO Subscribers (username, email, tier) VALUES ('user-1', 'user-1@gmail.com', 'FREE');
+INSERT INTO Subscribers (username, email, tier) VALUES ('user-2', 'user-2@gmail.com', 'PRO');
+INSERT INTO Subscribers (username, email, tier) VALUES ('user-3', 'user-3@gmail.com', 'FREE');
+INSERT INTO Subscribers (username, email, tier) VALUES ('user-4', 'user-4@gmail.com', 'STANDARD');
+INSERT INTO Subscribers (username, email, tier) VALUES ('user-5', 'user-5@gmail.com', 'STANDARD');
+INSERT INTO Subscribers (username, email, tier) VALUES ('user-6', 'user-6@gmail.com', 'PRO');
+INSERT INTO Subscribers (username, email, tier) VALUES ('user-7', 'user-7@gmail.com', 'FREE');
+INSERT INTO Subscribers (username, email, tier) VALUES ('user-8', 'user-8@gmail.com', 'PRO');
+INSERT INTO Subscribers (username, email, tier) VALUES ('user-9', 'user-9@gmail.com', 'STANDARD');
+INSERT INTO Subscribers (username, email, tier) VALUES ('user-10', 'user-10@gmail.com', 'FREE');

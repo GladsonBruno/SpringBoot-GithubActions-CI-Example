@@ -4,6 +4,6 @@ RUN mkdir /opt/app
 
 WORKDIR /opt/app
 
-ADD ./target/demo-api.jar /opt/app/demo-api.jar
+ADD ./target/springboot-api-example.jar /opt/app/springboot-api-example.jar
 
-ENTRYPOINT ["java", "-jar", "/opt/app/demo-api.jar"]
+ENTRYPOINT ["java", "-jar", "/opt/app/springboot-api-example.jar"]
