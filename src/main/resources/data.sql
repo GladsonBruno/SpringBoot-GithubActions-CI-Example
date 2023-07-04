@@ -1,6 +1,6 @@
-INSERT INTO roles(name) VALUES('ROLE_USER');
-INSERT INTO roles(name) VALUES('ROLE_MODERATOR');
-INSERT INTO roles(name) VALUES('ROLE_ADMIN');
+INSERT INTO ROLES(name) VALUES('ROLE_ADMIN');
+INSERT INTO ROLES(name) VALUES('ROLE_MODERATOR');
+INSERT INTO ROLES(name) VALUES('ROLE_USER');
 INSERT INTO Subscribers (username, email, tier) VALUES ('user-1', 'user-1@gmail.com', 'FREE');
 INSERT INTO Subscribers (username, email, tier) VALUES ('user-2', 'user-2@gmail.com', 'PRO');
 INSERT INTO Subscribers (username, email, tier) VALUES ('user-3', 'user-3@gmail.com', 'FREE');
